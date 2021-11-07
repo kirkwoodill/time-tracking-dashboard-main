@@ -6,7 +6,7 @@ function Card() {
     return (
       <Wrap>
         <ImgContainer>
-          <img src="/images/icon-play.svg" />
+          <img src="/images/icon-play.svg" alt=""/>
         </ImgContainer>
         <InfoContainer>
             <h2>Play</h2>
@@ -31,6 +31,11 @@ const ImgContainer = styled.div`
 `
 
 const InfoContainer = styled.div`
-    background-color: green;
-    border-radius: 12px;
-`
+  background-color: hsl(235, 46%, 20%);
+  color: white;
+  transition: background 0.3s 0s ease-in;
+
+  &:hover {
+    background-color: hsl(235, 45%, 61%);
+  }
+`;
