@@ -4,7 +4,7 @@ import Card from './Card'
 
 function Dashboard() {
     return (
-      <Container>
+      <Container className="card-grid">
         <Card />
         <Card />
         <Card />

@@ -1,12 +1,12 @@
 import logo from './logo.svg'
-import './App.css'
+import './App.scss'
 import Dashboard from './components/Dashboard'
 
 function App() {
   return (
     <div className="App">
       <Dashboard />
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Eit <code>src/App.js</code> and save to reload.
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
