@@ -46,24 +46,51 @@ body {
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  @media screen and (min-width: $desktop) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
+  grid-template-columns: 325px;
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "menu" "work" "play" "study" "exercise" "social" "self-care"; 
+  grid-column-gap: 22px;
+  grid-row-gap: 22px;
+
   @media screen and (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "menu work play study" "menu exercise social self-care";
   }
-  grid-column-gap: 18px;
-  grid-row-gap: 18px;
 }
 
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  background-color: $dark-blue;
+  transition: background 0.25s 0s ease-in;
+
+  &:hover {
+    background-color: $desaturated-blue;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .current-hrs {
+    font-size: 32px;
+    font-weight: 100;
+  }
+
+  .last-hrs {
+    font-size: 15px;
+    font-weight: 400;
+    color: $pale-blue;
   }
 }
 

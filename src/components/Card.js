@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import './Card.css';
 
 function Card() {
     return (
@@ -8,11 +7,16 @@ function Card() {
         <ImgContainer>
           <img src="/images/icon-play.svg" alt=""/>
         </ImgContainer>
-        <InfoContainer>
-            <h2>Play</h2>
-            <span><strong>5</strong>hrs</span><br/>
-            <span>Last week - 36hrs</span>
-        </InfoContainer>
+        <div className="info-container">
+            <div className="wrapper">
+              <h2 className="card-title">Play</h2>
+              <img src="/images/icon-ellipsis.svg" alt="Ellipsis icon"/>
+            </div>
+            <div className="wrapper">
+              <span className="current-hrs">5hrs</span><br/>
+              <span className="last-hrs">Last week - 36hrs</span>
+            </div>
+        </div>
       </Wrap>
     );
 }
@@ -29,13 +33,3 @@ const ImgContainer = styled.div`
     background-color: red;
     border-radius: 12px;
 `
-
-const InfoContainer = styled.div`
-  background-color: hsl(235, 46%, 20%);
-  color: white;
-  transition: background 0.3s 0s ease-in;
-
-  &:hover {
-    background-color: hsl(235, 45%, 61%);
-  }
-`;

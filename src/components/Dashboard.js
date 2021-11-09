@@ -18,6 +18,4 @@ function Dashboard() {
 
 export default Dashboard
 
-// CSS Styling
-
 
