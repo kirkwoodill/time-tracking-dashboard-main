@@ -60,11 +60,17 @@ body {
 
 
 .img-container {
-  background-color: red;
+  margin-top: 20px;
+  background: no-repeat 95% -2px;
+  background-color: hsl(195, 74%, 62%);
   border-radius: 12px;
+  min-height: 83px;
 }
 
 .info-container {
+  margin-top: -28px;
+  min-height: 130px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -99,4 +105,41 @@ body {
     color: $pale-blue;
   }
 }
+
+.work {
+  .img-container {
+    background-color: $light-red-a;
+  }
+}
+
+.play {
+  .img-container {
+    background-color: $soft-blue;
+  }
+}
+
+.play {
+  .img-container {
+    background-color: $light-red-b;
+  }
+}
+
+.exercise {
+  .img-container {
+    background-color: $lime-green;
+  }
+}
+
+.social {
+  .img-container {
+    background-color: $violet;
+  }
+}
+
+.self-care {
+  .img-container {
+    background-color: $soft-orange;
+  }
+}
+
 
