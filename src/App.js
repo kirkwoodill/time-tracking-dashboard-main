@@ -1,12 +1,11 @@
 import logo from './logo.svg'
 import './App.scss'
 import Dashboard from './components/Dashboard'
-let bob = require('../src/data.json');
+
 
 function App() {
   return (
-    console.log(bob[0].title),
-    <div className="App">
+    <>
       
       <Dashboard />
       {/* <header className="App-header">
@@ -23,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-    </div>
+    </>
   );
 }
 
