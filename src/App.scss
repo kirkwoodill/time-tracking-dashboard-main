@@ -109,36 +109,42 @@ body {
 .work {
   .img-container {
     background-color: $light-red-a;
+    background-image: url('./assets/images/icon-work.svg');
   }
 }
 
 .play {
   .img-container {
     background-color: $soft-blue;
+    background-image: url('./assets/images/icon-play.svg');
   }
 }
 
-.play {
+.study {
   .img-container {
     background-color: $light-red-b;
+    background-image: url('./assets/images/icon-study.svg');
   }
 }
 
 .exercise {
   .img-container {
     background-color: $lime-green;
+    background-image: url('./assets/images/icon-exercise.svg');
   }
 }
 
 .social {
   .img-container {
     background-color: $violet;
+    background-image: url('./assets/images/icon-social.svg');
   }
 }
 
 .self-care {
   .img-container {
     background-color: $soft-orange;
+    background-image: url('./assets/images/icon-self-care.svg');
   }
 }
 
