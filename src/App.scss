@@ -31,7 +31,7 @@ $desaturated-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
 $white: hsl(255,100%,100%);
 
-$desktop: 1440px;
+$desktop: 940px;
 
 body {
   display: flex;
@@ -87,6 +87,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:nth-child(2) {
+      @media screen and (min-width: $desktop) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
   }
 
   .card-title {
