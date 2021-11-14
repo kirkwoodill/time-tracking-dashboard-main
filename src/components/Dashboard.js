@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 let cards = require('../data.json');
 
 function Dashboard() {
