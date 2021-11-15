@@ -131,6 +131,8 @@ body {
   grid-area: menu;
 
   .profile-container {
+    background-color: $blue;
+    
     .img-wrap {
       width: 85px;
       
@@ -144,6 +146,8 @@ body {
 }
 
 .work {
+  grid-area: work;
+
   .img-container {
     background-color: $light-red-a;
     background-image: url('./assets/images/icon-work.svg');
@@ -151,6 +155,8 @@ body {
 }
 
 .play {
+  grid-area: play;
+
   .img-container {
     background-color: $soft-blue;
     background-image: url('./assets/images/icon-play.svg');
@@ -158,6 +164,8 @@ body {
 }
 
 .study {
+  grid-area: study;
+
   .img-container {
     background-color: $light-red-b;
     background-image: url('./assets/images/icon-study.svg');
@@ -165,6 +173,8 @@ body {
 }
 
 .exercise {
+  grid-area: exercise;
+
   .img-container {
     background-color: $lime-green;
     background-image: url('./assets/images/icon-exercise.svg');
@@ -172,6 +182,8 @@ body {
 }
 
 .social {
+  grid-area: social;
+
   .img-container {
     background-color: $violet;
     background-image: url('./assets/images/icon-social.svg');
@@ -179,6 +191,8 @@ body {
 }
 
 .self-care {
+  grid-area: self-care;
+
   .img-container {
     background-color: $soft-orange;
     background-image: url('./assets/images/icon-self-care.svg');
