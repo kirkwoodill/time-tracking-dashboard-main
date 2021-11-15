@@ -16,7 +16,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
-          <div classname="settings-container">
+          <div className="settings-container">
             <ul className="wrapper">
               <li><a href="#">Daily</a></li>
               <li><a href="#">Weekly</a></li>

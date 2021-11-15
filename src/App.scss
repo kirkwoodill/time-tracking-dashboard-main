@@ -181,6 +181,25 @@ body {
       }
     }
   }
+  .settings-container {
+    .wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 22px;  
+      
+      li {
+        display: inline-block;
+        
+        a {
+          color: $desaturated-blue;
+
+          &:active, &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 .attribution {
