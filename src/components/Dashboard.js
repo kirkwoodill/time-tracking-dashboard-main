@@ -7,9 +7,13 @@ function Dashboard() {
         <div className="card-wrap menu">
           <div className="profile-container">
             <div className="wrapper">
-              <img src="https://git.io/J1vSb" alt="Jeremy Robson" />
-              <span>Report for</span>
-              <h2>Jeremy Robson</h2>
+              <div className="img-wrap">
+                <img src="https://git.io/J1vSb" className="profile-img" alt="Jeremy Robson" />
+              </div>
+              <div className="text-wrap">
+                <span>Report for</span>
+                <h2>Jeremy Robson</h2>
+              </div>
             </div>
           </div>
           <div classname="settings-container">

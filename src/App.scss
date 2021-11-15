@@ -129,6 +129,18 @@ body {
 
 .menu {
   grid-area: menu;
+
+  .profile-container {
+    .img-wrap {
+      width: 85px;
+      
+      .profile-img {
+        width: 100%;
+        border: 3px solid #fff;
+        border-radius: 100%;
+      }
+    }
+  }
 }
 
 .work {
