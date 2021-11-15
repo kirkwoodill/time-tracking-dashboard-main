@@ -4,8 +4,8 @@ function Dashboard() {
     return (
       <div className="card-grid">
         {/* Menu Block */}
-        <div className="card-wrap menu">
-          <div className="profile-container">
+        <div className="card menu">
+          <div className="card-container">
             <div className="wrapper">
               <div className="img-wrap">
                 <img src="https://git.io/J1vSb" className="profile-img" alt="Jeremy Robson" />
@@ -17,7 +17,7 @@ function Dashboard() {
             </div>
           </div>
           <div classname="settings-container">
-            <ul>
+            <ul className="wrapper">
               <li><a href="#">Daily</a></li>
               <li><a href="#">Weekly</a></li>
               <li><a href="#">Monthly</a></li>
@@ -27,9 +27,8 @@ function Dashboard() {
 
         {/* Map for all other cards */}
         {cards.map((card, x) => (
-          <div className={`card-wrap ${card.id}`} key={x}>
-            <div className="img-container"></div>
-            <div className="info-container">
+          <div className={`card ${card.id}`} key={x}>
+            <div className="card-container">
               <div className="wrapper">
                 <h2 className="card-title">{card.title}</h2>
                 <img src="https://git.io/J1viv" alt="Ellipsis icon" />

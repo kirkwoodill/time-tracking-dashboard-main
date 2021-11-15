@@ -1,4 +1,4 @@
-/* Reset
+/* Reset / Global
    ========================================================================== */
 
 * {
@@ -6,10 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-}
-
-ul,li {
-  list-style: none;
+  transition: background 0.25s 0s ease-in;
 }
 
 body {
@@ -20,9 +17,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul,li {
+  list-style: none;
 }
 
 
@@ -30,7 +26,7 @@ code {
    ========================================================================== */
 
 /* Primary */
-$blue: hsl(246, 80%, 60%);
+$blue: hsl(246, 80%, 60%); /* Menu */
 $light-red-a: hsl(15, 100%, 70%); /* Work */
 $soft-blue: hsl(195, 74%, 62%); /* Play */
 $light-red-b: hsl(348, 100%, 68%); /* Study */
@@ -45,7 +41,10 @@ $desaturated-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
 $white: hsl(255,100%,100%);
 
-$desktop: 940px;
+$desktop: 940px; /* Desktop Breakpoint */
+
+/* Dashboard
+   ========================================================================== */
 
 body {
   display: flex;
@@ -61,36 +60,74 @@ body {
 .card-grid {
   display: grid;
   grid-template-columns: 325px;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
   grid-template-areas: "menu" "work" "play" "study" "exercise" "social" "self-care"; 
   grid-column-gap: 22px;
   grid-row-gap: 22px;
 
   @media screen and (min-width: $desktop) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
     grid-template-areas: "menu work play study" "menu exercise social self-care";
   }
 }
 
-.img-container {
-  margin-top: 20px;
-  background: no-repeat 95% -2px;
-  background-color: hsl(195, 74%, 62%);
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  background-repeat: no-repeat;
+  background-position: 95% -2px;
   border-radius: 12px;
-  min-height: 83px;
+
+  &.work {
+    grid-area: work;
+    background-color: $light-red-a;
+    background-image: url('./assets/images/icon-work.svg');
+  }
+
+  &.play {
+    grid-area: play;
+    background-color: $soft-blue;
+    background-image: url('./assets/images/icon-play.svg');
+  }
+
+  &.study {
+    grid-area: study;
+    background-color: $light-red-b;
+    background-image: url('./assets/images/icon-study.svg');
+  }
+
+  &.exercise {
+    grid-area: exercise;
+    background-color: $lime-green;
+    background-image: url('./assets/images/icon-exercise.svg');
+  }
+
+  &.social {
+    grid-area: social;
+    background-color: $violet;
+    background-image: url('./assets/images/icon-social.svg');
+  }
+
+  &.self-care {
+    grid-area: self-care;
+    background-color: $soft-orange;
+    background-image: url('./assets/images/icon-self-care.svg');
+  }
 }
 
-.info-container {
-  margin-top: -28px;
-  min-height: 130px;
-  border-radius: 12px;
+.card-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 130px;
   padding: 22px;
-
+  border-radius: 12px;
   background-color: $dark-blue;
-  transition: background 0.25s 0s ease-in;
 
   &:hover {
     background-color: $desaturated-blue;
@@ -130,9 +167,10 @@ body {
 .menu {
   grid-area: menu;
 
-  .profile-container {
+  .card-container {
+    position: initial;
     background-color: $blue;
-    
+
     .img-wrap {
       width: 85px;
       
@@ -144,61 +182,6 @@ body {
     }
   }
 }
-
-.work {
-  grid-area: work;
-
-  .img-container {
-    background-color: $light-red-a;
-    background-image: url('./assets/images/icon-work.svg');
-  }
-}
-
-.play {
-  grid-area: play;
-
-  .img-container {
-    background-color: $soft-blue;
-    background-image: url('./assets/images/icon-play.svg');
-  }
-}
-
-.study {
-  grid-area: study;
-
-  .img-container {
-    background-color: $light-red-b;
-    background-image: url('./assets/images/icon-study.svg');
-  }
-}
-
-.exercise {
-  grid-area: exercise;
-
-  .img-container {
-    background-color: $lime-green;
-    background-image: url('./assets/images/icon-exercise.svg');
-  }
-}
-
-.social {
-  grid-area: social;
-
-  .img-container {
-    background-color: $violet;
-    background-image: url('./assets/images/icon-social.svg');
-  }
-}
-
-.self-care {
-  grid-area: self-care;
-
-  .img-container {
-    background-color: $soft-orange;
-    background-image: url('./assets/images/icon-self-care.svg');
-  }
-}
-
 
 .attribution {
   font-size: 11px;
