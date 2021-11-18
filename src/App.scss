@@ -59,14 +59,16 @@ body {
 
 .card-grid {
   display: grid;
-  grid-template-columns: 325px;
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: minmax(325px, 330px);
+  grid-template-rows: 200px repeat(6, 160px);
   grid-template-areas: "menu" "work" "play" "study" "exercise" "social" "self-care"; 
-  grid-column-gap: 22px;
-  grid-row-gap: 22px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin: 24px;
 
   @media screen and (min-width: $desktop) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, minmax(250px, 260px));
+    grid-template-rows: repeat(2, 250px);
     grid-template-areas: "menu work play study" "menu exercise social self-care";
   }
 }
@@ -124,8 +126,8 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  min-height: 130px;
-  padding: 22px;
+  min-height: 122px;
+  padding: 25px 25px 30px;
   border-radius: 12px;
   background-color: $dark-blue;
 
